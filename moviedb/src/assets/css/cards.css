@@ -1,0 +1,22 @@
+.movie-cards{
+    border-radius: 1rem !important;
+    height: 600px;
+}
+
+@media(max-width:1024px){
+    .movie-cards{
+        height: 520px;
+    }
+}
+
+@media(max-width:768px){
+    .movie-cards{
+        height: 520px;
+    }
+}
+
+@media(max-width:426px){
+    .movie-cards{
+        height: 720px;
+    }
+}

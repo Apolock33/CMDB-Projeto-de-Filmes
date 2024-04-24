@@ -1,0 +1,13 @@
+.rating-circle svg {
+    color: #0bc323;
+}
+
+.cast-display {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+}
+
+.cast-display::-webkit-scrollbar {
+    background-color: transparent;
+  }
