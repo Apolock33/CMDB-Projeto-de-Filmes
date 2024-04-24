@@ -7,7 +7,7 @@ import { formatDate } from './services/generalServices';
 
 const App = () => {
   const [movieList, setMovieList] = useState([]);
-  const [filter, setFilter] = useState('Mais Vistos');
+  const [filter, setFilter] = useState('Popular');
   const [page, setPage] = useState(1);
 
   if (filter.length == 0) {
@@ -19,7 +19,7 @@ const App = () => {
   }, [page]);
 
   const loadMovieList = async () => {
-    if (filter.length == 0 || filter == 'Mais Vistos') {
+    if (filter.length == 0 || filter == 'Popular') {
       await getMoviesList(page)
         .then(movies => {
           setMovieList(movieList.concat(movies.data.results));
@@ -36,7 +36,6 @@ const App = () => {
           } else {
             setMovieList(movieList.concat(res.data.results));
           }
-          console.log(res);
         })
         .catch(err => {
           console.log(err);
@@ -59,7 +58,7 @@ const App = () => {
 
       <div className='row text-light text-center my-5'>
         <div className='col-12'>
-          <h2>Resultados Para: {filter}</h2>
+          <h2>Results to: {filter}</h2>
           <input
             type='text'
             className='w-100 mt-3 searchbar'
