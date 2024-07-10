@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from '@mui/material/Container';
@@ -10,7 +9,6 @@ import Slide from '@mui/material/Slide';
 import '../../assets/css/header.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { ReactComponent as ChevronUp } from '../../assets/imgs/chevron-up-outline.svg'
-import { Link } from 'react-router-dom';
 
 export default function Header(props) {
 

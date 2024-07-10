@@ -36,9 +36,4 @@ const getMovieReviews = (id) => {
     return request;
 }
 
-const getMovieSimilar = (id) => {
-    const request = api.get(`${apiInfo.route}/${id}/similar?api_key=${apiInfo.apiKey}`);
-    return request;
-}
-
 export { getMovieDetails, getMoviesList, getMoreMovies, searchMovie, getMovieCast, getMovieReviews };

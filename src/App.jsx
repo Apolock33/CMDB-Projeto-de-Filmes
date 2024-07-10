@@ -10,7 +10,7 @@ const App = () => {
   const [filter, setFilter] = useState('Popular');
   const [page, setPage] = useState(1);
 
-  if (filter.length == 0) {
+  if (filter.length === 0) {
     setFilter('Mais Vistos');
   }
 
@@ -19,7 +19,7 @@ const App = () => {
   }, [page]);
 
   const loadMovieList = async () => {
-    if (filter.length == 0 || filter == 'Popular') {
+    if (filter.length === 0 || filter === 'Popular') {
       await getMoviesList(page)
         .then(movies => {
           setMovieList(movieList.concat(movies.data.results));
@@ -31,7 +31,7 @@ const App = () => {
     } else {
       await searchMovie(page, filter)
         .then(res => {
-          if (page == 1) {
+          if (page === 1) {
             setMovieList(res.data.results);
           } else {
             setMovieList(movieList.concat(res.data.results));

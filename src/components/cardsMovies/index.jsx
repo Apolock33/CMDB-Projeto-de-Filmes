@@ -8,7 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import '../../assets/css/cards.css'
 
-export default function CardsMovies({ id, title, img, date, cssClass }) {
+export default function CardsMovies({ id, title, img, date }) {
 
   const redirectToDetails = () => {
     window.location.href = `/movie/${id}`;
